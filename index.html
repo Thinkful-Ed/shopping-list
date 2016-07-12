@@ -13,9 +13,9 @@
   <div class="container">
     <h1>Shopping List</h1>
 
-    <form>
-      <label for="shopping-list-item">Add an item</label>
-      <input type="text" name="shopping-list-item" id="shopping-list-item" placeholder="e.g., broccoli">
+    <form id="js-shopping-list-form">
+      <label for="shopping-list-entry">Add an item</label>
+      <input type="text" name="shopping-list-entry" id="shopping-list-entry" placeholder="e.g., broccoli">
       <button type="submit">Add item</button>
     </form>
 
@@ -46,7 +46,7 @@
         <span class="shopping-item shopping-item__checked">milk</span>
         <div class="shopping-item-controls">
           <button class="shopping-item-toggle">
-            <span class="button-label">uncheck</span>
+            <span class="button-label">check</span>
           </button>
           <button class="shopping-item-delete">
             <span class="button-label">delete</span>
