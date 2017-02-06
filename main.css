@@ -30,7 +30,7 @@ button:hover {
   width: 250px;
 }
 
-#js-shopping-list-add-item h2 {
+form h2 {
   display: inline-block;
   margin: 0;
   font-size: 1em;
