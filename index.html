@@ -13,58 +13,57 @@
   <div class="container">
     <h1>Shopping List</h1>
 
-    <form id="js-shopping-list-form">
-      <label for="shopping-list-entry">Add an item</label>
+    <form id="js-shopping-list-add-item">
+      <h2><label for="shopping-list-entry">Add an item</label></h2>
       <input type="text" name="shopping-list-entry" id="shopping-list-entry" placeholder="e.g., broccoli">
       <button type="submit">Add item</button>
     </form>
 
-    <ul class="shopping-list">
-      <li>
-        <span class="shopping-item">apples</span>
-        <div class="shopping-item-controls">
-          <button class="shopping-item-toggle">
-            <span class="button-label">check</span>
-          </button>
-          <button class="shopping-item-delete">
-            <span class="button-label">delete</span>
-          </button>
-        </div>
-      </li>
-      <li>
-        <span class="shopping-item">oranges</span>
-        <div class="shopping-item-controls">
-          <button class="shopping-item-toggle">
-            <span class="button-label">check</span>
-          </button>
-          <button class="shopping-item-delete">
-            <span class="button-label">delete</span>
-          </button>
-        </div>
-      </li>
-      <li>
-        <span class="shopping-item shopping-item__checked">milk</span>
-        <div class="shopping-item-controls">
-          <button class="shopping-item-toggle">
-            <span class="button-label">check</span>
-          </button>
-          <button class="shopping-item-delete">
-            <span class="button-label">delete</span>
-          </button>
-        </div>
-      </li>
-      <li>
-        <span class="shopping-item">bread</span>
-        <div class="shopping-item-controls">
-          <button class="shopping-item-toggle">
-            <span class="button-label">check</span>
-          </button>
-          <button class="shopping-item-delete">
-            <span class="button-label">delete</span>
-          </button>
-        </div>
-      </li>
-    </ul>
+    <form id="js-shopping-list-form">
+      <ul class="shopping-list">
+        <li id="apples">
+          <h3 class="shopping-item">
+            <input type="checkbox" id="apples__completed" name="apples__completed">
+            <label for="apples__completed">apples</label>
+          </h3>
+          <div class="shopping-item-controls">
+            <label for="apples__deleted">Delete<span class="visually-hidden"> apples</span></label>
+            <input type="checkbox" id="apples__deleted" name="apples__deleted">
+          </div>
+        </li>
+        <li id="oranges">
+          <h3 class="shopping-item">
+            <input type="checkbox" id="oranges__completed" name="oranges__completed">
+            <label for="oranges__completed">oranges</label>
+          </h3>
+          <div class="shopping-item-controls">
+            <label for="oranges__deleted">Delete<span class="visually-hidden"> oranges</span></label>
+            <input type="checkbox" id="oranges__deleted" name="oranges__deleted">
+          </div>
+        </li>
+        <li id="milk">
+          <h3 class="shopping-item">
+            <input type="checkbox" id="milk__completed" name="milk__completed" checked>
+            <label for="milk__completed">milk</label>
+          </h3>
+          <div class="shopping-item-controls">
+            <label for="milk__deleted">Delete<span class="visually-hidden"> milk</span></label>
+            <input type="checkbox" id="milk__deleted" name="milk__deleted">
+          </div>
+        </li>
+        <li id="bread">
+          <h3 class="shopping-item">
+            <input type="checkbox" id="bread__completed" name="bread__completed">
+            <label for="bread__completed">bread</label>
+          </h3>
+          <div class="shopping-item-controls">
+            <label for="bread__deleted">Delete<span class="visually-hidden"> bread</span></label>
+            <input type="checkbox" id="bread__deleted" name="bread__deleted">
+          </div>
+        </li>
+      </ul>
+      <button type="button" name="button">Trash Deleted Items</button>
+    </form>
   </div>
 
 </body>
