@@ -7,10 +7,14 @@ $('#js-shopping-list-form button').click(function(event){
     const inputItem = $('#shopping-list-entry').val();
     //alert(inputItem);
 
-
+    //creating an if statement to prevent empty strings from being inserted. as they have been
+    if(inputItem ===''){
+        alert('Please add an item');
+    } else{
     //add inputItem to list with proper div and buttons etc
     //reminder** space between span buttons of check and delete provides a space on webpg
     $('.shopping-list').append(`<li><span class="shopping-item">${inputItem}</span><div class="shopping-item-controls"><button class="shopping-item-toggle"><span class="button-label">check</span></button> <button class="shopping-item-delete"><span class="button-label">delete</span></button></div></li>`);
+    };
 });
 
 /* ******CODE CHECK(TOGGLE) FUNCTION****
@@ -36,6 +40,11 @@ I had issues getting the particular check button to crossout the added item. add
 
 $('.shopping-list').on('click','.shopping-item-toggle', event=>{
    //alert('check clicked!');//let's me know if the button has been clicked
+   /*a couple of problems. initially had code as:
+         $(event.target).closest('span').toggleClass('shopping-item__checked');
+    it didn't work. would cross out the check button's text instead. which is weird b/c .closest() should bubble up not go down to it's child. ???is span not considered a child???? any way eventually used .find() **warning: find gets all descendants that match element. be specific where you can.** so i called 'li' with .closest() and then found span by it's class .shopping-item. it worked.
+*/
+
     $(event.target).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');//Woohoo!
 });
 
