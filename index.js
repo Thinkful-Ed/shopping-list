@@ -36,7 +36,7 @@ I had issues getting the particular check button to crossout the added item. add
 
 $('.shopping-list').on('click','.shopping-item-toggle', event=>{
    //alert('check clicked!');//let's me know if the button has been clicked
-    $(event.target).closest('span').toggleClass('shopping-item__checked');//Woohoo!
+    $(event.target).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');//Woohoo!
 });
 
 /* ******CODE CHECK(TOGGLE) AND DELETE BUTTON FUNCTIONS***** */
