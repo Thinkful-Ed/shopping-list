@@ -1,4 +1,5 @@
 $(function(){
+    //add item to list
     $('#js-shopping-list-form').submit(event =>{
         event.preventDefault();
         
@@ -14,6 +15,22 @@ $(function(){
 
         userText.val('');
     });
+
+    //Check item from list
+    $('.shopping-item-toggle').on('click', event => {
+        const listItem = $(event.currentTarget);
+        //console.log(listItem.closest('span').text());
+        (listItem.text() === 'uncheck') ? listItem.text('check'): listItem.text('uncheck');
+        listItem.closest('div').siblings('span').toggleClass('shopping-item__checked');
+
+
+
+
+
+
+    });
+
+
 
 
 
