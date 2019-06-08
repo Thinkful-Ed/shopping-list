@@ -32,4 +32,4 @@ $(function(){
         listItem.closest('li').remove();
 
     });
-});
+}); 
