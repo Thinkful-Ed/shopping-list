@@ -22,18 +22,14 @@ $(function(){
         //console.log(listItem.closest('span').text());
         (listItem.text() === 'uncheck') ? listItem.text('check'): listItem.text('uncheck');
         listItem.closest('div').siblings('span').toggleClass('shopping-item__checked');
-
-
-
-
-
-
     });
 
+    //Delete items
+    $('.shopping-item-delete').on('click', event => {
 
+        const listItem = $(event.currentTarget);
 
+        listItem.closest('li').remove();
 
-
-
-
+    });
 });
