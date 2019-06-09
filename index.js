@@ -33,11 +33,10 @@ $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
 });
 
 // remove item when delete button is clicked
-
+// strikethrough item when check button is clicked
 $('.shopping-list').on('click', '.shopping-item-toggle', function(event){
     event.preventDefault();
     $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
 });
 
-// strikethrough item when check button is clicked
   
