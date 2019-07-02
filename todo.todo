@@ -1,0 +1,22 @@
+Requirements:
+    - Using DOM manipulation and traversal to dynamically add and remove HTML elements and apply styles.
+    - fork Thikful repo on gitHub https://github.com/Thinkful-Ed/shopping-list @done
+    - pull gitHub repo to local @done
+    - create seperate branch for practice @done
+    - Linking to your application JavaScript file from the index.html page. @done
+    - Put your application code in a file called index.js and link to it in index.html @done
+    - Linking to an externally hosted library (jQuery) and a locally hosted JavaScript file (index.js). @done
+        - external must be a CDN-hosted version of jQuery @done
+        - Be sure to put both script elements at the bottom of the <body>element. @done
+    - add to shopping list
+        - enter items they need to purchase by entering text and hitting "Return" or clicking the "Add item" button
+    - check/uncheck items on list
+        - check and uncheck items on the list by clicking the "Check" button
+    - permanetly remove items from list
+    - Use this and event delegation
+    - Do not alter index.html or main.css other than adding the links to the external JavaScript inside index.html. Write JavaScript code that works with the existing HTML and CSS to implement the required features.
+    - Hint: you may find it helpful to read up on and use the following jQuery methods: .submit(), preventDefault(), toggleClass(), and closest().
+    - Merge branch and push to github
+    - Publish on GitHub pages
+    - Submit pages link on Thinkful
+    
