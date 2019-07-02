@@ -1,6 +1,6 @@
 Requirements:
     - Using DOM manipulation and traversal to dynamically add and remove HTML elements and apply styles.
-    - fork Thikful repo on gitHub https://github.com/Thinkful-Ed/shopping-list @done
+    - fork Thinkful repo on gitHub https://github.com/Thinkful-Ed/shopping-list @done
     - pull gitHub repo to local @done
     - create seperate branch for practice @done
     - Linking to your application JavaScript file from the index.html page. @done
