@@ -9,8 +9,7 @@ Requirements:
         - external must be a CDN-hosted version of jQuery @done
         - Be sure to put both script elements at the bottom of the <body>element. @done
     - enter items they need to purchase by entering text and hitting "Return" or clicking the "Add item" button @done
-    - check/uncheck items on list
-        - check and uncheck items on the list by clicking the "Check" button
+    - check and uncheck items on the list by clicking the "Check" button @done
     - permanetly remove items from list
     - Use this and event delegation
     - Do not alter index.html or main.css other than adding the links to the external JavaScript inside index.html. Write JavaScript code that works with the existing HTML and CSS to implement the required features.
