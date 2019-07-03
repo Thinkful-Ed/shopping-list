@@ -18,7 +18,7 @@ $(document).ready(() => {
   });
   // really struggled here. DOM was deaf until I used document, and passed in .shopping-item-toggle. Problem resolved. Learned to add an alert to test if button fucntionality was working at all. Really helped resolve problem.
   $(document).on('click', '.shopping-item-toggle', () => {
-    $('.shopping-item').toggleClass('shopping-item__checked');
+    $(event.target).closest('div').siblings('.shopping-item').toggleClass('shopping-item__checked');
   })
   console.log($list);
 });
