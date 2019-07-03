@@ -8,8 +8,7 @@ Requirements:
     - Linking to an externally hosted library (jQuery) and a locally hosted JavaScript file (index.js). @done
         - external must be a CDN-hosted version of jQuery @done
         - Be sure to put both script elements at the bottom of the <body>element. @done
-    - add to shopping list
-        - enter items they need to purchase by entering text and hitting "Return" or clicking the "Add item" button
+    - enter items they need to purchase by entering text and hitting "Return" or clicking the "Add item" button @done
     - check/uncheck items on list
         - check and uncheck items on the list by clicking the "Check" button
     - permanetly remove items from list
