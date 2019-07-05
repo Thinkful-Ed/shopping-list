@@ -23,8 +23,10 @@ $(document).ready(() => {
         .addClass($item)
         .prependTo(".shopping-list")
         .show();
-      $(`.${$item}>.shopping-item`).text(`${$item}`)
-        .css({'font-weight': 'bold'});
+      $(`.${$item}>.shopping-item`)
+        .text(`${$item}`)
+        .css({'font-weight': 'bold'})
+        .data($item)
     }
   });
 
