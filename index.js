@@ -5,7 +5,7 @@ $(document).ready(() => {
   const date = new Date();
   const $addedToList = $(`<span> Added to list: ${date}</span>`).css({'font-size': '80%', 'margin': '15px'});
   
-  $('form').on('click', ':submit', () => {
+  $('form').submit(() => {
     
     event.preventDefault();
     const $item = $('#shopping-list-entry').val();
