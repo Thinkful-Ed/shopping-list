@@ -5,14 +5,14 @@ $(document).ready(() => {
   const date = new Date();
   const $addedToList = $(`<span> Added to list: ${date}</span>`).css({'font-size': '80%', 'margin': '15px'});
   
-  $('form :submit').on('click', () => {
+  $('form').on('click', ':submit', () => {
     
     event.preventDefault();
     const $item = $('#shopping-list-entry').val();
     
     if (list.includes($item)) {
       alert('That item is already on your list!')
-    } else if($item === '') {
+    } else if($item == '' || $item == null) {
       alert('Please enter a valid list item.')
     } else {
       list.push($item);
@@ -30,13 +30,19 @@ $(document).ready(() => {
     }
   });
 
-  $(document).on('click', '.shopping-item-toggle', () => {
-    $(event.target).closest('div').siblings('.shopping-item').toggleClass('shopping-item__checked');
+  $('ul').on('click', '.shopping-item-toggle', () => {
+    $(event.target)
+      .closest('div')
+      .siblings('.shopping-item')
+      .toggleClass('shopping-item__checked');
   })
 
-  $(document).on('click', '.shopping-item-delete', () => {
-    $(event.target).closest('li').remove();
+  $('ul').on('click', '.shopping-item-delete', () => {
+    $(event.target)
+      .closest('li')
+      .remove();
   })
+
   console.log(list);
 });
 
