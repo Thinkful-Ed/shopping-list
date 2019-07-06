@@ -12,8 +12,8 @@ Requirements:
     - check and uncheck items on the list by clicking the "Check" button @done
     - permanetly remove items from list @done
     - Use this and event delegation
-    - Do not alter index.html or main.css other than adding the links to the external JavaScript inside index.html. Write JavaScript code that works with the existing HTML and CSS to implement the required features.
-    - Hint: you may find it helpful to read up on and use the following jQuery methods: .submit(), preventDefault(), toggleClass(), and closest().
+    - Do not alter index.html or main.css other than adding the links to the external JavaScript inside index.html. Write JavaScript code that works with the existing HTML and CSS to implement the required features. @done
+    - Hint: you may find it helpful to read up on and use the following jQuery methods: .submit(), preventDefault(), toggleClass(), and closest(). @done
     - Merge branch and push to github
     - Publish on GitHub pages
     - Submit pages link on Thinkful
