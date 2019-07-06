@@ -2,8 +2,6 @@ $(document).ready(() => {
   
   $('li').hide();
   const list = [];
-  const date = new Date();
-  const $addedToList = $(`<span> Added to list: ${date}</span>`).css({'font-size': '80%', 'margin': '15px'});
   
   $('form').submit(() => {
     
@@ -19,14 +17,11 @@ $(document).ready(() => {
       $("li")
         .eq(0)
         .clone()
-        .removeClass()
-        .addClass($item)
+        .attr('id', `${$item}`)
         .prependTo(".shopping-list")
         .show();
-      $(`.${$item}>.shopping-item`)
+      $(`#${$item}>.shopping-item`)
         .text(`${$item}`)
-        .css({'font-weight': 'bold'})
-        .data($item)
     }
   });
 
@@ -38,6 +33,7 @@ $(document).ready(() => {
   })
 
   $('ul').on('click', '.shopping-item-delete', () => {
+    
     $(event.target)
       .closest('li')
       .remove();
