@@ -33,7 +33,8 @@ $(document).ready(() => {
   })
 
   $('ul').on('click', '.shopping-item-delete', () => {
-    
+    let itemIndex = list.findIndex(item => item === $('li').attr('id'));
+    list.splice(itemIndex, 1);
     $(event.target)
       .closest('li')
       .remove();
