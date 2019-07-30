@@ -4,7 +4,7 @@ $('#js-shopping-list-form').submit(function(event){
   
   event.preventDefault();
 
-  const listItem =$ ('js-shopping-list-entry').val();
+  const listItem = $('.js-shopping-list-entry').val();
 
   $('.js-shopping-list-entry').val('');
 
