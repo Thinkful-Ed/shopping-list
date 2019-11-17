@@ -16,14 +16,23 @@ $(function groceryList() {
             <span class="button-label">delete</span>
           </button>
         </div>`);
+
+        
+    });
+
+    $("button").on("click", function(event) {
+        $(this).closest("li").toggleClass("shopping-item__checked");
+    });
+
 //listen for the "check" button and toggle corresponding class:
 //(target all <ul> descendants with the specified class name:
-        $("ul li.shopping-item-toggle").on("click", function handleAddButton(event) {
-            $(this).toggleClass("shopping-item__ch)";
-
-        });
+    $("button.shopping-item-delete").on("click", function remove(event) {
+//remove the ele clicked:
+            $(this).closest("li").remove();
+        
 
     });
+
 
  
 } );
