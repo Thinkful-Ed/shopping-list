@@ -20,21 +20,19 @@ $(function groceryList() {
         </div>
     </li>`);      
     });
-
+//listen for the "check" button and toggle class for nearest "li" element if clicked:
     $("ul").on('click', 'li', 'button.shopping-item-toggle', function(event) {
-        event.stopPropagation();
-        $("button.shopping-item-toggle").closest("li").toggleClass("shopping-item__checked");
+        event.stopPropagation();//stop bubbling up the DOM and only affect li clicked
+        $(this).closest("li").toggleClass("shopping-item__checked");
         
     });
 
 //listen for the "delete" button and remove nearest "li" element if clicked:
-//         $("ul").on('click', 'li', "button.shopping-item-delete", function(event) {          
-//             $(this).closest("li").remove();
-//         });
-// //listen for the "check" button and toggle class for nearest "li" element if clicked:
-//         $("ul").on('click', 'button.shopping-item-toggle', function(event) {
-//             $('button.shopping-item-toggle').closest("li").toggleClass("shopping-item__checked");
-//         });
+        $("ul").on('click', "button.shopping-item-delete", function(event) { 
+            event.stopPropagation();//stop bubbling up the DOM and only affect li clicked         
+            $(this).closest("li").remove();
+        });
+
 
 
     });
