@@ -21,14 +21,14 @@ $(function groceryList() {
     </li>`);      
     });
 //listen for the "check" button and toggle class for nearest "li" element if clicked:
-    $("ul").on('click', '.shopping-item-toggle', function(event) {
+    $(".shopping-list").on('click', '.shopping-item-toggle', function(event) {
         event.stopPropagation();//stop bubbling up the DOM and only affect li clicked
-        $(this).closest("li").find('button.shopping-item').toggleClass("shopping-item__checked");
+        $(this).closest("li").find('.shopping-item').toggleClass("shopping-item__checked");
         
     });
 
 //listen for the "delete" button and remove nearest "li" element if clicked:
-        $("ul").on('click', ".shopping-item-delete", function(event) { 
+        $(".shopping-list").on('click', ".shopping-item-delete", function(event) { 
             event.stopPropagation();//stop bubbling up the DOM and only affect li clicked         
             $(this).closest("li").remove();
         });
