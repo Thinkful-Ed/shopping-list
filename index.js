@@ -23,7 +23,7 @@ $(function groceryList() {
 //listen for the "check" button and toggle class for nearest "li" element if clicked:
     $("ul").on('click', '.shopping-item-toggle', function(event) {
         event.stopPropagation();//stop bubbling up the DOM and only affect li clicked
-        $(this).closest("li").find('.shopping-item').toggleClass("shopping-item__checked");
+        $(this).closest("li").find('button.shopping-item').toggleClass("shopping-item__checked");
         
     });
 
