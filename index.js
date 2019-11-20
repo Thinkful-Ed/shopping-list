@@ -9,7 +9,7 @@ $(function groceryList() {
 //add item to the end of <ul> shopping list as new <li> along with matching html elements (possible to achieve with `clone` or `after` method as well?):
         $('.shopping-list').append(
     `<li>
-        <span>${item}</span>
+        <span class="shopping-item">${item}</span>
         <div class="shopping-item-controls">
           <button class="shopping-item-toggle">
             <span class="button-label">check</span>
