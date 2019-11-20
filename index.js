@@ -22,7 +22,7 @@ $(function groceryList() {
     });
 //listen for the "check" button and toggle class for nearest "li" element if clicked:
     $(".shopping-list").on('click', '.shopping-item-toggle', function(event) {
-        event.stopPropagation();//stop bubbling up the DOM and only affect li clicked
+        // event.stopPropagation();//stop bubbling up the DOM and only affect li clicked
         $(this).closest("li").find('.shopping-item').toggleClass("shopping-item__checked");
         
     });
