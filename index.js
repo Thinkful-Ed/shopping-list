@@ -1,5 +1,5 @@
 $(function (){
-    //creating a function that adds items on submit
+    //creating a function that adds items on click
     $('form button').click(function (event){
 
         event.preventDefault();
@@ -21,7 +21,7 @@ $(function (){
 
     });
 
-    //Raizy E 25feb2020 creating the same funtion for when the return button is pressed
+    //Raizy E 25feb2020 creating the same funtion for when the return button is pressed on the button
     $('form button').keydown(function (event){
         if(event.which===13){
             event.preventDefault();
@@ -62,7 +62,21 @@ $(function (){
         )
         }
     });
+
+  
   //Raizy E 25feb2020 creating a function to toggle the checked button
+    $('ul').on('click', '.shopping-item-toggle', function(){
+        //identify the span in the list and toggle the strikethrough class on the span
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked')
+    });
+    
+
+  //Raizy Einhorn 26Feb2020 
+    //creating Jquery function to delete <li> items when the delete button is clicked
+    $('ul').on('click', '.shopping-item-delete', function(){
+        //find the <li> element and remove it
+        $(this).closest('li').remove();
+    });
 
 })
 
