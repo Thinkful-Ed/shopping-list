@@ -1,13 +1,21 @@
+// let itemCheck = function(){
+//         $('.shopping-item-toggle').on('click', function(event){
+//             if(!$(this).parents().siblings().hasClass("shopping-item__checked")){
+//                 $(this).parents().siblings('.shopping-item').addClass("shopping-item__checked");
+//             }else{
+//                 $(this).parents().siblings('.shopping-item').removeClass("shopping-item__checked");
+//             };
+//             //console.log($(this).parents().siblings('.shopping-item'));
+//         });
+// };
+
 let itemCheck = function(){
-        $('.shopping-item-toggle').on('click', function(event){
-            if(!$(this).parents().siblings().hasClass("shopping-item__checked")){
-                $(this).parents().siblings('.shopping-item').addClass("shopping-item__checked");
-            }else{
-                $(this).parents().siblings('.shopping-item').removeClass("shopping-item__checked");
-            };
-            //console.log($(this).parents().siblings('.shopping-item'));
-        });
-};
+    $('.shopping-item-toggle').on('click', function(event){
+        console.log($(this).parent().siblings(".shopping-item"));
+        $(this).parent().siblings(".shopping-item").toggleClass("shopping-item__checked");
+    });
+}
+
 let itemRemove = function(){
     $('.shopping-item-delete').on('click', function(event){
         $(this).parent().parent().remove();
