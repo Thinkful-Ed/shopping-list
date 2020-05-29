@@ -11,16 +11,16 @@
 // $('.shopping-list').on('click', '.shopping-item-toggle', function(e){
 //       $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked')});
 
-
-
 let itemCheck = function(){
-    $('.shopping-list').on('click', '.shopping-item-toggle', function(e){
-          $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked')});
+
+        $('.shopping-list').on('click', '.shopping-item-toggle', function(e){
+            $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked')});
+
+    // $('.shopping-list').on('click', '.shopping-item-toggle', function(e){
+    //     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked')});
     // $('.shopping-item-toggle').on('click', function(event){
     //     $(this).closest('li').find('.shopping-item').toggleClass("shopping-item__checked");
-    //     // console.log($(this).parent().siblings(".shopping-item"));
     // });
-    // // console.log($(this).parent().siblings(".shopping-item"));
 }
 
 let itemRemove = function(){
@@ -28,6 +28,7 @@ let itemRemove = function(){
         $(this).parent().parent().remove();
     });
 };
+
 let itemAdd = function(){
   $('#js-shopping-list-form').submit(event => {
     event.preventDefault();
@@ -42,11 +43,14 @@ let itemAdd = function(){
                  $('<button>').attr('class', 'shopping-item-delete').append(
                  $('<span>').attr('class','button-label').append('delete'))
     )));
+    $('#shopping-list-entry').val('');
     $(itemRemove);
-    $(itemCheck);
+    // $(itemCheck);
   });
+  console.log("test");
+
 };
 
-$(itemAdd);
-$(itemRemove);
 $(itemCheck);
+$(itemRemove);
+$(itemAdd);
