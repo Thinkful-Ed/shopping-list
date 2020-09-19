@@ -5,7 +5,6 @@ $(function() {
     $('#js-shopping-list-form').submit( event => {
       // stop the default form submission behavior
       event.preventDefault();
-      // in case there's already results
   
       const item = $("#shopping-list-entry").val();
       // we'll store individual DOM elements 
