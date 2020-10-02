@@ -9,21 +9,22 @@ function addItem(){
     });
 };
 
+
 function removeItem(){
-    $('.shopping-list').on('click', 'button[class="shopping-item-delete"]', event => {
-        $(this).parent().remove();
+    $('ul').on('click', '.shopping-item-delete', function(event) {
+        $(this).closest('li').remove();
     });
 };
+
         
 
-/*function checkItem(){
-    $('.shopping-item').click('.shopping-item-toggle', event => {
-        var target = $(this).closest('.shopping-item');
-        $(target).toggleClass('shopping-item__checked');
-        console.log(target);
-    })
-}*/
+function checkItem(){
+    $('ul').on('click', '.shopping-item-toggle', function(event) {
+        console.log('working');
+        $(this).closest('li').children('.shopping-item').toggleClass('shopping-item__checked');
+    });
+};
 
 addItem();
 removeItem();
-//checkItem();
+checkItem();
