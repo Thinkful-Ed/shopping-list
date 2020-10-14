@@ -28,7 +28,11 @@ $('#js-shopping-list-form').submit(function(e){
 // $().toggle(function(e){
 
 // });
-// Function to handle the deletion of an item
-// $().on('click', function(e){
 
-// });
+// Function to handle the deletion of an item
+$('.shopping-list').on('click', '.shopping-item-delete', function(e){
+    // Initialize a variable to store the item we wish to delete
+    const deleteItem = $(this).parents('li');
+    // Remove the parent li and it's content from the DOM
+    deleteItem.remove();
+});
