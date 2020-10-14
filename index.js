@@ -25,14 +25,17 @@ $('#js-shopping-list-form').submit(function(e){
 });
 
 // Function to handle the completion of an item
-// $().toggle(function(e){
-
-// });
+$('.shopping-list').on('click', '.shopping-item-toggle', function(e){
+    // Initialize a varabile to store the item and it's encompassing DOM elements we wish to mark as checked
+    const checkItem = $(this).closest('li');
+    // Toggle the 'checked' class on the appropriate element
+    checkItem.children('span.shopping-item').toggleClass('shopping-item__checked');
+});
 
 // Function to handle the deletion of an item
 $('.shopping-list').on('click', '.shopping-item-delete', function(e){
-    // Initialize a variable to store the item we wish to delete
-    const deleteItem = $(this).parents('li');
+    // Initialize a variable to store the item and it's encompassing DOM elements we wish to delete
+    const deleteItem = $(this).closest('li');
     // Remove the parent li and it's content from the DOM
     deleteItem.remove();
 });
