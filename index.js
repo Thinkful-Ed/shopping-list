@@ -17,13 +17,14 @@ $(function() {
   });
 
   // Check
-  $('.shopping-item-toggle').on('click', function(e) {
+  $('.shopping-list').on('click', '.shopping-item-toggle', function(e) {
+    console.log(e);
     let listText = $(e.target).parent().parent().siblings('.shopping-item');
     listText.toggleClass('shopping-item__checked');
   });
 
   // Delete
-  $('.shopping-item-delete').on('click', function(e) {
+  $('.shopping-list').on('click', '.shopping-item-delete', function(e) {
     let parentLi = $(e.target).parent().parent().parent();
     parentLi.remove();
   });
