@@ -14,6 +14,7 @@ $(function() {
     </button>
     </div>
     </li>`);
+    $('#shopping-list-entry').val('');
   });
 
   // Check
